@@ -1,0 +1,29 @@
+/* styles.css */
+
+/*
+  This CSS file provides a clean, modern style for the website.
+  It uses the Tailwind CSS utility classes linked in the HTML,
+  but you can add custom styles here if you need them.
+*/
+
+/*
+  For a simple setup with a clean look, we can use Tailwind CSS.
+  The styling is applied directly in the HTML file using utility classes.
+  This CSS file is here for any custom styles you might want to add later.
+*/
+
+/* Example of a custom style */
+/*
+  .custom-button-animation {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+*/
