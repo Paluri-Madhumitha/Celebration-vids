@@ -1,29 +1,248 @@
-/* styles.css */
+/* Basic and Universal Styles */
+:root {
+    --primary-color: #5b42f3;
+    --secondary-color: #6c5be3;
+    --dark-text: #2c3e50;
+    --light-bg: #f5f6fa;
+    --white-bg: #ffffff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
 
-/*
-  This CSS file provides a clean, modern style for the website.
-  It uses the Tailwind CSS utility classes linked in the HTML,
-  but you can add custom styles here if you need them.
-*/
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
 
-/*
-  For a simple setup with a clean look, we can use Tailwind CSS.
-  The styling is applied directly in the HTML file using utility classes.
-  This CSS file is here for any custom styles you might want to add later.
-*/
+/* Header & Navigation */
+header {
+    background-color: var(--white-bg);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
 
-/* Example of a custom style */
-/*
-  .custom-button-animation {
-    animation: pulse 2s infinite;
-  }
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
 
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-  }
-*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-text);
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Reusable Sections */
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--dark-text);
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-bg);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Services Grid */
+.services-section, .how-it-works-section, .contact-section {
+    padding: 50px 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 50px;
+}
+
+.service-card {
+    background-color: var(--white-bg);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card h3 {
+    color: var(--dark-text);
+    margin-top: 0;
+}
+
+.service-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+/* How It Works Section */
+.steps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.step-card {
+    max-width: 300px;
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: rgba(91, 66, 243, 0.1);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+/* Contact Form */
+.contact-section {
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+#contact-form input, #contact-form textarea, #contact-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+.form-response-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: left;
+    display: none;
+    line-height: 1.6;
+}
+
+.form-response-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Video Gallery */
+.video-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.video-card {
+    background-color: var(--white-bg);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-card img,
+.video-card video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.final-video-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--white-bg);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
