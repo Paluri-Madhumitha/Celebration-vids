@@ -9,6 +9,7 @@ serviceSelect.addEventListener('change', () => {
         otherReasonInput.style.display = 'block';
     } else {
         otherReasonInput.style.display = 'none';
+        otherReasonInput.value = ''; // Clear the input if it's hidden
     }
 });
 
