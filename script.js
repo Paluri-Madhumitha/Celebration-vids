@@ -1,4 +1,4 @@
-const contactForm = document.getElementById('contact-form-data');
+const contactForm = document.getElementById('contact-form');
 const formDetails = document.getElementById('form-details');
 const serviceSelect = document.getElementById('service-type');
 const otherReasonInput = document.getElementById('other-reason');
@@ -17,7 +17,7 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
+    
     const phone = document.getElementById('phone').value;
     const eventDate = document.getElementById('event-date').value;
     const serviceType = serviceSelect.value;
@@ -42,7 +42,7 @@ contactForm.addEventListener('submit', (e) => {
             formDetails.innerHTML = `
                 <div style="font-weight: bold; margin-bottom: 15px;">Your request has been submitted successfully!</div>
                 <b>Name:</b> ${name}<br>
-                <b>Email:</b> ${email}<br>
+            
                 <b>Phone:</b> ${phone}<br>
                 <b>Event Date:</b> ${eventDate}<br>
                 <b>Service Type:</b> ${serviceType}<br>
