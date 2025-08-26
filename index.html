@@ -1,41 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Celebration Vids</title>
+   
     <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
-    <main>
-        <section id="features">
-            <h2>Features</h2>
-            <p>Check out my deployed project here: <a href="https://todo-app-9b8df.web.app">My Live Project</a></p>
-        </section>
+    <header>
+        <div class="logo">Celebration Vids</div>
+         <nav>
+            <ul>
+                 <li><a href="#video">Video</a></li>
+                 <li><a href="#services">Services</a></li>
+                 <li><a href="#how-it-works">How It Works</a></li>
+                 <li><a href="#contact">Contact</a></li>
+                 </ul>
+            </nav>
+         </header>
 
-        <section id="contact-form">
-            <h2>Get in Touch</h2>
-            <form id="contact-form-data">
-                <input type="text" id="name" placeholder="Name">
-                <input type="email" id="email" placeholder="Email">
-                <input type="tel" id="phone" placeholder="Phone">
-                <input type="date" id="event-date">
-                <select id="service-type">
-                    <option value="" disabled selected>Select a Service</option>
-                    <option value="photography">Photography</option>
-                    <option value="videography">Videography</option>
-                    <option value="other">Other</option>
-                </select>
-                <input type="text" id="other-reason" placeholder="Please specify" style="display:none;">
-                <textarea id="message" placeholder="Your Message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <div id="form-details"></div>
-        </section>
+     <main>
+         <section class="hero-section">
+            <h1>Celebrate Every Moment, Beautifully</h1>
+            <p>I create custom, heartfelt videos and invitations for any celebration. Let me help you
+                capture your special moments.</p>
+             <a href="#contact" class="btn">Get Your Video Quote</a>
+            </section>
 
-    </main>
+        <section class="gallery-section" id="video">
+             <h2 class="section-title">Your Video Draft</h2>
+             <div class="video-gallery">
+                 <div class="video-card">
+                     <video
+                        src="https://assets.mixkit.co/videos/preview/mixkit-little-girl-playing-with-a-toy-in-a-park-51105-large.mp4"
+                        controls loop
+                        poster="https://assets.mixkit.co/videos/preview/mixkit-little-girl-playing-with-a-toy-in-a-park-51105-thumbnail-450x250.jpg"></video>
+                     </div>
+                 </div>
+             <p class="final-video-text">Thank you! Here is your final video with music.</p>
+             </section>
 
+         <section class="services-section" id="services">
+             <h2 class="section-title">Our Services</h2>
+             <div class="services-grid">
+                 </div>
+             </section>
+
+         <section class="how-it-works-section" id="how-it-works">
+             <h2 class="section-title">How It Works</h2>
+             <div class="steps-grid">
+                 <div class="step-card">
+                     <div class="step-number">1</div>
+                     <h3>You Contact Us</h3>
+                     <p>Fill out the form below with your details and what kind of video or
+                        invitation you need.</p>
+                      </div>
+                 <div class="step-card">
+                     <div class="step-number">2</div>
+                     <h3>We Create the Video</h3>
+                     <p>Once we agree on the details, we'll get to work creating a masterpiece.</p>
+                     </div>
+                 <div class="step-card">
+                     <div class="step-number">3</div>
+                     <h3>You Get Your Video</h3>
+                     <p>We will deliver the final, high-quality video or invitation for you to share
+                        and cherish.</p>
+                     </div>
+                 </div>
+             </section>
+
+         <section class="contact-section" id="contact">
+             <h2 class="section-title">Get in Touch</h2>
+             <form id="contact-form">
+                 <input type="text" id="name" name="name" placeholder="Name" required>
+                 <input type="email" id="email" name="email" placeholder="Email Address" required>
+                 <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                 <input type="date" id="event-date" name="event-date" required>
+                 <select id="service-type" name="service-type" required>
+                     <option value="" disabled selected>-- Select a Service --</option>
+                     <option value="photography">Photography</option>
+                     <option value="videography">Videography</option>
+                     <option value="other">Other</option>
+                     </select>
+                 <input type="text" id="other-reason" name="other-reason"
+                    placeholder="Please specify your service" style="display:none;">
+                 <textarea id="message" name="message" placeholder="Message" rows="5"
+                    required></textarea>
+                 <button type="submit" class="btn submit-btn">Submit Request</button>
+                 </form>
+             <div id="form-response" class="form-response-message"></div>
+             <div id="form-details" class="form-response-message form-response-success"></div>
+             </section>
+         </main>
+     <footer>
+         <p>© 2025 Celebration Vids. All Rights Reserved.</p>
+         </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
