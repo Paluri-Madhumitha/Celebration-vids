@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main>
+        <section id="features">
+            <h2>Features</h2>
+            <p>Check out my deployed project here: <a href="https://todo-app-9b8df.web.app">My Live Project</a></p>
+        </section>
+
+        <section id="contact-form">
+            <h2>Get in Touch</h2>
+            <form id="contact-form-data">
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="tel" id="phone" placeholder="Phone">
+                <input type="date" id="event-date">
+                <select id="service-type">
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="photography">Photography</option>
+                    <option value="videography">Videography</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" id="other-reason" placeholder="Please specify" style="display:none;">
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="form-details"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
